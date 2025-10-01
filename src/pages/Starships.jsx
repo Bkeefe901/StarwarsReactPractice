@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Ship from "../components/Ship";
 
 
 export default function Starships() {
@@ -21,8 +22,14 @@ export default function Starships() {
     getData(urlStr)
    }, []);
 
-   let loading
+   let loading = () => {
+    return <h1>Loading</h1>
+   }
+
+   let loaded = () => data.map((ship, i) => {
+    return <Ship key={i} {...ship} />
+   })
 
 
-  return <h1>Starships</h1>;
+  return data? <div className="container">{loaded()}</div> : loading();
 }
