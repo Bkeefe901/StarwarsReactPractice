@@ -1,21 +1,25 @@
 import { Link } from "react-router-dom";
+import style from './Nav.module.css';
+
 
 export default function NavBar(){
 
+
+
     return (
-        <nav width={'100%'}>
+        <nav className="style.nav">
             <ul>
                 <Link to={'/'}>
-                    <li>Home</li>
+                    <h2>Home</h2>
                 </Link>
                 <Link to={'/people'}>
-                    <li>People</li>
+                    <h2>People</h2>
                 </Link>
                 <Link to={'/starships'}>
-                    <li>Starships</li>
+                    <h2>Starships</h2>
                 </Link>
                 <Link to={'/planets'}>
-                    <li>Planets</li>
+                    <h2>Planets</h2>
                 </Link>
             </ul>
         </nav>

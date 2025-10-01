@@ -1,6 +1,5 @@
-import { useState } from 'react'
+import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import './App.css'
 
 // Pages
 import Homepage from './pages/Homepage';
@@ -9,7 +8,9 @@ import Starships from './pages/Starships';
 import Planets from './pages/Planets';
 
 //Components
-import NavBar from './components/NavBar';
+import NavBar from './components/Nav/NavBar';
+
+
 
 function App() {
   // Set up our routes and route components
@@ -21,10 +22,10 @@ function App() {
     <>
       <NavBar />
       <Routes>
-        <Route path='/' element={<Homepage />}></Route>
-        <Route path='/people' element={<People />}></Route>
-        <Route path='/planets' element={<Planets />}></Route>
-        <Route path='/starships' element={<Starships />}></Route>
+        <Route path='/' element={<Homepage />} />
+        <Route path='/people' element={<People />} />
+        <Route path='/planets' element={<Planets />} />
+        <Route path='/starships' element={<Starships />} />
       </Routes>
     </>
   )
