@@ -7,8 +7,7 @@ export default function NavBar(){
 
 
     return (
-        <nav className="style.nav">
-            <ul>
+        <nav className={style.nav}>
                 <Link to={'/'}>
                     <h2>Home</h2>
                 </Link>
@@ -21,7 +20,6 @@ export default function NavBar(){
                 <Link to={'/planets'}>
                     <h2>Planets</h2>
                 </Link>
-            </ul>
         </nav>
     )
 }
